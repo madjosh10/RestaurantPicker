@@ -80,6 +80,9 @@
                                                         <state key="normal" title="Add a Restaurant">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="addRestaurantPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UTq-pH-WPz"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>

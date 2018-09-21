@@ -39,6 +39,11 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func addRestaurantPressed(_ sender: Any) {
+        guard let restaurantName = addRestaurantTextField.text else {return}
+        
+        
+    }
     
     
 

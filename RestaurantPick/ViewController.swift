@@ -9,12 +9,33 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    // Labels and StackViews
+    
+    @IBOutlet weak var resturantLabel: UILabel!
+    @IBOutlet weak var showRestaurantsLabel: UILabel!
+    @IBOutlet weak var resturantStackView: UIStackView!
+    
+    @IBOutlet weak var showRestPicked: UILabel!
+    @IBOutlet weak var showPickedResStackView: UIStackView!
+    
+    @IBOutlet weak var addRestaurantTextField: UITextField!
+    @IBOutlet weak var addARestaurant: UIButton!
+    @IBOutlet weak var addRestaurantStackView: UIStackView!
+    
+    var restaurants: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        resturantStackView.isHidden = true
+        showPickedResStackView.isHidden = true
+        
+    
     }
-
+    
+    
 
 }
+
 

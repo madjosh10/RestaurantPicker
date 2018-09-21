@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,123 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RestaurantPick" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jxd-P7-RAn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="XoT-gH-Nzz">
+                                        <rect key="frame" x="20" y="65" width="335" height="75"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULB-SK-X6j">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="16"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whataburger, Dairy Queen, Subway, McDonalds" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDA-RT-mIm">
+                                                <rect key="frame" x="0.0" y="34" width="335" height="41"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6Lx-9t-zoo">
+                                        <rect key="frame" x="20" y="160" width="335" height="196"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ema-mc-0ES">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="96"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What to Pick has chosen your destination: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdT-dP-PJb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="16"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whataburger" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhc-dT-nT4">
+                                                        <rect key="frame" x="0.0" y="26" width="335" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                                        <color key="textColor" red="1" green="0.90489605544233043" blue="0.35946742163480294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUV-Zs-epx">
+                                                        <rect key="frame" x="0.0" y="66" width="335" height="30"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Pick a Restaurant">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZW5-p0-AIl">
+                                                <rect key="frame" x="0.0" y="116" width="335" height="80"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's on your mind?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zjj-Mv-xCe">
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sdb-m3-eUN">
+                                                        <rect key="frame" x="0.0" y="50" width="335" height="30"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Add a Restaurant">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What to Pick?🍔" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAM-K4-xiB">
+                                        <rect key="frame" x="20" y="20" width="335" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.4865337610244751" green="0.68586087226867676" blue="0.91075217723846436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="zAM-K4-xiB" secondAttribute="trailing" constant="20" id="1J1-4I-Awp"/>
+                                    <constraint firstAttribute="trailing" secondItem="6Lx-9t-zoo" secondAttribute="trailing" constant="20" id="71P-tn-su8"/>
+                                    <constraint firstItem="zAM-K4-xiB" firstAttribute="top" secondItem="Jxd-P7-RAn" secondAttribute="top" constant="20" id="EcR-qE-EQL"/>
+                                    <constraint firstItem="6Lx-9t-zoo" firstAttribute="leading" secondItem="Jxd-P7-RAn" secondAttribute="leading" constant="20" id="FG9-8H-gza"/>
+                                    <constraint firstItem="XoT-gH-Nzz" firstAttribute="top" secondItem="Jxd-P7-RAn" secondAttribute="top" constant="65" id="SZZ-XM-uCh"/>
+                                    <constraint firstItem="XoT-gH-Nzz" firstAttribute="leading" secondItem="Jxd-P7-RAn" secondAttribute="leading" constant="20" id="Vis-pD-9sr"/>
+                                    <constraint firstItem="zAM-K4-xiB" firstAttribute="leading" secondItem="Jxd-P7-RAn" secondAttribute="leading" constant="20" id="mAC-8E-YRf"/>
+                                    <constraint firstAttribute="trailing" secondItem="XoT-gH-Nzz" secondAttribute="trailing" constant="20" id="rD9-h4-QNa"/>
+                                    <constraint firstItem="6Lx-9t-zoo" firstAttribute="top" secondItem="XoT-gH-Nzz" secondAttribute="bottom" constant="20" id="siT-Fn-0DT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jxd-P7-RAn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Eo5-xU-9Il"/>
+                            <constraint firstItem="Jxd-P7-RAn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="W6A-Y0-JUg"/>
+                            <constraint firstItem="Jxd-P7-RAn" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="fgk-oe-7iF"/>
+                            <constraint firstItem="Jxd-P7-RAn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qko-mU-6BE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="addARestaurant" destination="Sdb-m3-eUN" id="VAV-oD-MeE"/>
+                        <outlet property="addRestaurantStackView" destination="ZW5-p0-AIl" id="2Aa-ew-Ilq"/>
+                        <outlet property="addRestaurantTextField" destination="Zjj-Mv-xCe" id="3O3-kv-93V"/>
+                        <outlet property="resturantLabel" destination="ULB-SK-X6j" id="Bd5-hb-IJw"/>
+                        <outlet property="resturantStackView" destination="XoT-gH-Nzz" id="gKU-vk-jfN"/>
+                        <outlet property="showPickedResStackView" destination="Ema-mc-0ES" id="86C-1V-KmK"/>
+                        <outlet property="showRestPicked" destination="dhc-dT-nT4" id="PUL-lZ-ans"/>
+                        <outlet property="showRestaurantsLabel" destination="sDA-RT-mIm" id="f4x-Wo-0a6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

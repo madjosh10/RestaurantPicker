@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var resturantStackView: UIStackView!
     
     @IBOutlet weak var showRestPicked: UILabel!
+    @IBOutlet weak var pickerSpoke: UILabel!
     @IBOutlet weak var showPickedResStackView: UIStackView!
     
     @IBOutlet weak var addRestaurantTextField: UITextField!
@@ -35,18 +36,37 @@ class ViewController: UIViewController {
     }
     
     func updateRestaurantLabel() {
-        resturantLabel.text = restaurants.joined(separator: ", ")
+        showRestaurantsLabel.text = restaurants.joined(separator: ", ")
         
     }
     
     @IBAction func addRestaurantPressed(_ sender: Any) {
         guard let restaurantName = addRestaurantTextField.text else {return}
+        if addRestaurantTextField.text != "" {
+            restaurants.append(restaurantName)
+            updateRestaurantLabel()
+            addRestaurantTextField.text = ""
+            resturantStackView.isHidden = false
+            
+        } else {
+            resturantStackView.isHidden = false
+            showRestaurantsLabel.text = "Cannot have an Empty Text Field"
+        }
         
+        if restaurants.count > 1 {
+            showPickedResStackView.isHidden = false
+            showRestPicked.isHidden = true
+            pickerSpoke.isHidden = true
+            
+        }
         
-    }
+    } // end of addRestaurantPressed()
     
-    
+    @IBAction func randomRestaurantPressed(_ sender: Any) {
+        showRestPicked.text = restaurants.randomElement()
+        showRestPicked.isHidden = false
+        pickerSpoke.isHidden = false
+        
+    }// end randomRestaurantPressed()
 
-}
-
-
+} // end of ViewController

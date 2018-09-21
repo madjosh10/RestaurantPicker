@@ -34,6 +34,12 @@ class ViewController: UIViewController {
     
     }
     
+    func updateRestaurantLabel() {
+        resturantLabel.text = restaurants.joined(separator: ", ")
+        
+    }
+    
+    
     
 
 }
